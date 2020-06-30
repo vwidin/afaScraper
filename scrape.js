@@ -32,7 +32,7 @@ request(originalUrl, (error, response, html) => {
 		var parseData = allDataString.replace(/:/g,' ');  //Onödig replace som gjorde parse lättare
 		parseData = parseData.replace(/"/g,' ')
 
-		var url2 =/\/fastigheter\/([^,]*)/g
+		var url2 =/\/fastigheter\/([^,]*)/g		  //Regex för att hitta urls
 		var kord =/kord\s\s([^}]*)/g                      //Hittade koords här också
 		var kordParse = parseData.match(kord);
 		var urlParsed = parseData.match(url2);
