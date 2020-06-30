@@ -22,7 +22,7 @@ request(originalUrl, (error, response, html) => {
 
 		const $ = cheerio.load(html, {xmlMode: true})
 		const allData = [];
-
+		//URLs och koordinater är gömda i ett script. Hämtar, parsear och sparas i urlParsed och kordParse
 		$('script').each((i, el) => {
 			allData[i] = $(el).html();
 		});
